@@ -1,0 +1,126 @@
+@import "../../vars.css";
+
+.container {
+    color: var(--color-text);
+    margin-top: 120px;
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 5px 20%;
+    gap: 40px;
+}
+
+.text {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.text h2 {
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: left;
+    align-items: flex-start;
+    color: var(--color-title);
+}
+
+.text p {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: left;
+    align-items: flex-start;
+    color: var(--color-text);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style: none;
+    gap: 26px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.link a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 29px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ✅ Hover: color becomes #9b5de5 */
+.link a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+    color: #9b5de5;
+}
+
+.copyright {
+    font-size: 16px;
+    color: var(--color-text);
+    align-self: flex-start;
+    margin-top: 40px;
+    align-items: left;
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        gap: 23px;
+        align-items: center;
+    }
+
+    .text {
+        text-align: center;
+        align-items: center;
+    }
+
+    .links {
+        align-items: center;
+        gap: 15px;
+    }
+
+    .link {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .link a {
+        font-size: 20px;
+    }
+
+    .link img,
+    .link svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .link {
+        gap: 10px;
+    }
+
+    .copyright {
+        text-align: center;
+        align-self: center;
+        font-size: 15px;
+    }
+}
+
+/* ✅ Invert icons in light mode */
+body[data-theme="light"] .invertible {
+    filter: invert(1);
+}

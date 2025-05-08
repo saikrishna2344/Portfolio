@@ -1,0 +1,35 @@
+[
+  {
+    "role": "Application Engineer Trainee",
+    "organization": "Wavicle Data Solutions",
+    "start_date": "Feb, 2025",
+    "end_date": "Apr, 2025",
+    "experiences": ["worked as an Application Engineer Intern, focused on developing data-driven applications.", "learning full-stack technologies, and contributing to real-world business solutions."],
+    "imageSrc": "assets/history/wavicle.png"
+  },
+  {
+    "role": "Technical Intern",
+    "organization": "Airport Authority of India",
+    "start_date": "June, 2024",
+    "end_date": "Aug, 2024",
+    "experiences": ["Worked with airport-related data, involving SQL queries and data management tasks.",  "Gained insight into real-time operations and technology systems in the aviation sector."],
+    "imageSrc": "assets/history/aai.png"
+  },
+  {
+    "role": "IT Support Intern",
+    "organization": "NSIC (National Small Industries Corporation)",
+    "start_date": "June, 2023",
+    "end_date": "July, 2023",
+    "experiences": ["Explored how digital solutions support small businesses.", "Learned about business systems and their integration with technology to improve SME workflows."],
+    "imageSrc": "assets/history/nsic1.jpg"
+  },
+  {
+    "role": "Cloud Computing Intern",
+    "organization": "FIIT Placement & Training Institute",
+    "start_date": "Dec, 2022",
+    "end_date": "Jan, 2023",
+    "experiences": ["Completed a cloud computing course as part of a structured internship program.", "Gained hands-on experience with cloud fundamentals, enhancing technical skills and understanding of modern IT infrastructure."],
+    "imageSrc": "assets/history/fiit.png"
+  }
+]
+

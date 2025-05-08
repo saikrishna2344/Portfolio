@@ -1,0 +1,43 @@
+@keyframes floatUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .back-to-top-container {
+    all: unset;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .back-to-top:hover {
+    background-color: #6d1bd0;
+    transform: scale(1.1);
+  }
+    
+  
+  .back-to-top-container.show {
+    display: block;
+    opacity: 1;
+  }
+  
+  .back-to-top {
+    background-color: #9b5de5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    animation: floatUpDown 2s ease-in-out infinite;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  

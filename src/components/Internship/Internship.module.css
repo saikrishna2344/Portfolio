@@ -1,0 +1,213 @@
+@import "../../vars.css";
+
+.skill-image {
+    max-width: 100px; /* Maximum width for larger images */
+    max-height: 100px; /* Maximum height for larger images */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Ensures the whole image is visible */
+}
+
+.limited-width {
+    max-width: 600px;
+}
+
+.container {
+    color: var(--color-text);
+    margin-top: 79px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.title {
+    color: var(--color-text);
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    align-items: right;
+    margin-left: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.exp {
+    max-width: 500px;
+    color: rgb(198, 193, 193);
+    font-size: 20px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px; /* Reduced vertical gap */
+  column-gap: 40px; /* Adjust horizontal gap as needed */
+  justify-items: center;
+  align-items: start;
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+.skill {
+  flex: 0 0 calc(33.33% - 30px); /* 3 items per row, minus gap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  /* Remove hover from entire container */
+}
+
+.skill:hover .skillImageContainer,
+.skill:hover p {
+  transform: translateY(-5px); /* Floating effect for the image and text */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25); /* Shadow effect */
+}
+
+.skillImageContainer {
+  background-color: var(--color-secondary);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth effect */
+}
+
+.skill p {
+  font-size: 25px;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for text */
+}
+
+/* Responsive fix for smaller screens */
+@media (max-width: 768px) {
+  .skills {
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: 20px;
+  }
+
+  .skill {
+      flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+      grid-template-columns: 1fr;
+      margin-left: 0px;
+  }
+}
+
+
+.history {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Reduced gap for less whitespace */
+}
+
+.historyItem {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.historyItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.historyItemDetails {
+    font-family: var(--font-roboto);
+    color: #f1f1f1;
+}
+
+.historyItemDetails h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.historyItemDetails p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.historyItemDetails ul {
+    margin-top: 6px;
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #d0d0d0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.topBlur {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    min-width: 350px;
+    min-width: 350px;
+    top: -128px;
+    left: -10vw;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.bottomBlur {
+    position: absolute;
+    width: 70vw;
+    height: 50vw;
+    min-width: 350px;
+    min-width: 250px;
+    top: 246px;
+    right: -25vw;
+    border-radius: 764px;
+    background: rgba(25, 55, 109, 0.7);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+@media screen and (max-width: 830px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .history {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .historyItem {
+        padding: 18px;
+    }
+
+    .historyItemDetails h3 {
+        font-size: 22px;
+    }
+
+    .historyItemDetails p,
+    .historyItemDetails ul {
+        font-size: 16px;
+    }
+}

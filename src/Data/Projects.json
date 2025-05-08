@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Drone Ambulance and Medical Systems",
+      "imageSrc": "assets/project/Drone_pic2.jpg",
+      "description": "A prototype drone-based medical system designed to reduce emergency response time using GPS and IoT for real-time patient monitoring.",
+      "skills": ["IoT", "Embedded Systems", "C", "Arduino"],
+      "demo": "https://drive.google.com/file/d/1vdTtm7u27tHK6S7gVn3USpAQgP6Lod6_/view?usp=sharing",
+      "source": "https://github.com/saikrishna2344/Drone-Ambulance-and-Medical-Systems.git"
+    },
+    {
+      "title": "Obstacle Avoiding Robot",
+      "imageSrc": "assets/project/line_pic1.JPG",
+      "description": "An autonomous robot designed to navigate environments by detecting and avoiding obstacles using ultrasonic sensor and IR sensor, with real-time path correction and movement control managed by an Arduino-based system.",
+      "skills": ["Arduino","Program", "Robotics"],
+      "demo": "https://drive.google.com/file/d/1FvFkIFJDchzJL1UpO9CY6Z14jHLhLQTY/view?usp=sharing",
+      "source": "https://github.com/saikrishna2344/Obstacle_Avoiding_Robot.git"
+    },
+    {
+      "title": "Military Fire Sentry Gun Prototype",
+      "imageSrc": "assets/project/Military_pic.jpg",
+      "description": "A surveillance system with motion detection and automatic targeting using servo motors and PIR sensors for restricted zone security equiped with a gripper to detect and remove landmines.",
+      "skills": ["Arduino Programming", "PIR Sensor", "Python", "Automation"],
+      "demo" : "https://drive.google.com/file/d/1Rq3LQEZh-AGbQCPDwzu6Vrn6DLh3bgm1/view?usp=sharing",
+      "source": "https://github.com/saikrishna2344/military-sentry-gun.git"
+    }
+  ]
+  

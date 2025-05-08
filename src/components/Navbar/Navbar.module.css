@@ -1,0 +1,207 @@
+@import "../../vars.css";
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #9b5de5;
+    cursor: default;
+}
+
+.menu {
+    display: flex;
+}
+
+.menuItems {
+    display: flex;
+    gap: 47px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.menuItems a {
+    font-size: 25px;
+    color: var(--color-text);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 830px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10%;
+    }
+
+    .menu {
+        position: absolute;
+        right: 0;
+        margin-right: 10%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 11px;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    .menuBtn {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        transition: filter 0.3s ease;
+    }
+
+    /* 👇 Fix: Invert icon in light mode */
+    body[data-theme="light"] .menuBtn {
+        filter: invert(1);
+    }
+
+    .menuItems {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        border-radius: 10px;
+        background: linear-gradient(0deg,
+            rgba(25, 55, 109, 0.2) 0%,
+            rgba(25, 55, 109, 1) 100%);
+        padding: 24px 33px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+    }
+
+    .menuOpen {
+        display: flex;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    /* ✅ Light mode override for menu background and link color */
+    body[data-theme="light"] .menuItems {
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    body[data-theme="light"] .menuItems a {
+        color: #000000;
+    }
+}
+
+.themeToggle {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--color-text);
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Hide menu button on desktop */
+@media screen and (min-width: 831px) {
+    .menuBtn {
+        display: none;
+    }
+
+    .menuItems a.active {
+        font-weight: 600;
+        color: #9b5de5; /* Active color change */
+        border-bottom: 2px solid #9b5de5; /* Active underline color */
+    }
+
+    .menuItems a:hover {
+        /* No underline or color change on hover */
+        color: var(--color-text); /* Adjust hover color if needed */
+        border-bottom: none; /* Remove underline on hover */
+    }
+}
+
+.toggleWrapper {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.toggleBtn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 830px) {
+    .toggleWrapper {
+        margin-right: 60px;
+        margin-top: 5px;
+    }
+}
+
+.active {
+    font-weight: 600;
+    color: #9b5de5; /* Active color change */
+    border-bottom: 2px solid #9b5de5; /* Active underline color */
+}
+
+/* 👇 Wrapper for hamburger + theme toggle (only shown on mobile) */
+.mobileIcons {
+    display: none;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .themeToggleMobile {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  /* Show this group only on mobile */
+  @media screen and (max-width: 830px) {
+    .mobileIcons {
+      display: flex;
+    }
+  
+    .themeToggleDesktop {
+      display: none;
+    }
+  }
+  
+  /* Show theme toggle inside menu only on desktop */
+  @media screen and (min-width: 831px) {
+    .themeToggleDesktop {
+      display: block;
+    }
+  }
+
+  .navbar,
+  .menuItems,
+  .menuItems a,
+  .themeToggle,
+  .themeToggleMobile {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
