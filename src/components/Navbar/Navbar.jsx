@@ -16,7 +16,7 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.title} href="/">Sai</a>
+      <h1 className={styles.title}>Sai</h1>
 
       <div className={styles.menu}>
         {/* ✅ Mobile layout: Menu Icon and Theme Toggle Side-by-Side */}
