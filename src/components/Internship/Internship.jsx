@@ -12,6 +12,11 @@ import sqlImg from "../../assets/skills/sql.png";
 import reactImg from "../../assets/skills/react.png";
 import { getImageUrl } from "../../util";
 
+import wavicleImg from "../../assets/history/wavicle.png";
+import aaiImg from "../../assets/history/aai.png";
+import nsicImg from "../../assets/history/nsic1.jpg";
+import fiitImg from "../../assets/history/fiit.png";
+
 // Create an object to map skill titles to their respective images
 const images = {
   HTML: htmlImg,
@@ -21,6 +26,14 @@ const images = {
   SQL: sqlImg,
   React: reactImg,
 };
+
+const historyImages = {
+  "wavicle.png": wavicleImg,
+  "aai.png": aaiImg,
+  "nsic1.jpg": nsicImg,
+  "fiit.png": fiitImg,
+};
+
 
 // Apply styles based on image size (specific to each image)
 const imageStyle = (title) => {
@@ -62,7 +75,19 @@ export const Internship = () => {
           {
             history.map((historyItem, id) => {
               return <li key={id} className={styles.historyItem}>
-                <img src={getImageUrl(historyItem.imageSrc)} width="80" height="80" />
+                {historyImages[historyItem.imageSrc.split("/").pop()] ? (
+  <img
+    src={historyImages[historyItem.imageSrc.split("/").pop()]}
+    alt="history"
+    width="80"
+    height="80"
+  />
+) : (
+  <p style={{ color: "red" }}>
+    Missing image: {historyItem.imageSrc.split("/").pop()}
+  </p>
+)}
+
                 <div className={styles.historyItemDetails}>
                   <h3>{`${historyItem.role},${historyItem.organization}`}</h3>
                   <p className={styles.p}>{`${historyItem.start_date} - ${historyItem.end_date}`}</p>

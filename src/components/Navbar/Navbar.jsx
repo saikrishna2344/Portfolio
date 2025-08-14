@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
-import { getImageUrl } from "../../util";
+
+// ✅ Direct image imports
+import menuIcon from "../../assets/nav/menuIcon.png";
+import closeIcon from "../../assets/nav/closeIcon.png";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,21 +19,19 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.title} href="/">Sai</a>
+      <h1 className={styles.title}>Sai</h1>
 
       <div className={styles.menu}>
         {/* ✅ Mobile layout: Menu Icon and Theme Toggle Side-by-Side */}
         <div className={styles.mobileIcons}>
-          <img
-            className={styles.menuBtn}
-            src={
-              menuOpen
-                ? getImageUrl("assets/nav/closeIcon.png")
-                : getImageUrl("assets/nav/menuIcon.png")
-            }
-            alt="menu-button"
-            onClick={() => setMenuOpen(!menuOpen)}
-          />
+        <img
+  className={styles.menuBtn}
+  src={menuOpen ? closeIcon : menuIcon}
+  alt="menu-button"
+  style={{ width: "30px", height: "30px" }} // TEMP debug
+  onClick={() => setMenuOpen(!menuOpen)}
+/>
+
           <button
             onClick={() => setDarkMode(!darkMode)}
             className={styles.themeToggleMobile}
@@ -61,7 +62,7 @@ export const Navbar = () => {
             </li>
           ))}
 
-          {/* ✅ Keep theme toggle in menu for desktop view */}
+          {/* ✅ Desktop theme toggle */}
           <li className={styles.themeToggleDesktop}>
             <button
               onClick={(e) => {
@@ -79,4 +80,3 @@ export const Navbar = () => {
     </nav>
   );
 };
-
